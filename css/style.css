@@ -1,0 +1,367 @@
+/* Table of Contents
+-- Fonts
+-- Typography
+-- Common Styles
+-- Side Navigation
+
+Colors
+-- vanilla gray: #f6f5f3
+-- white-ish: #f9f8fd
+-- scuffed dark gray: #3d3d3f
+-- simpler lime green: #7dce94
+-- light green: #d6e0e0
+-- ashy purple: #6f6f93;
+-- lilac: #9c9cd1
+*/
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Glegoo|Ubuntu:700i');
+
+/* Typography */
+.text-xs-small { font-size: 12px;}
+.text-small { font-size: 16px;}
+
+/* Common Styles */
+
+/* Top Navigation Bar */
+nav {
+    width: 100%;
+    height: 100px;
+		position: fixed;
+		top: 0;
+    background-color: transparent;
+    z-index: 100;
+}
+
+nav a {
+		text-align: center;
+		text-decoration: none;
+		margin: 10px 35px
+}
+
+nav a:hover {
+		background: transparent;
+		color: #7dce94;
+}
+
+.navbar-right a {
+		float: right;
+		color: #6f6f93;
+		padding: 20px 0px;
+    font-size: 15px
+}
+
+.navbar-right a:hover {
+		padding: 23px 0px;
+}
+
+.navbar-logo-left a {
+		float: left;
+		font-size: 45px;
+		color: #6f6f93;
+		padding: 0px 20px
+}
+/* End Navigation Bar */
+
+/* Pages */
+.page {
+	width: 100%;
+	height: 100vh;
+}
+
+.typewriter {
+  display: flex;
+  position: relative;
+  top: 25%;
+  left: 0%;
+}
+
+.typewriter h1 {
+  font-size: 200px;
+  color: #86B1DE;
+  overflow: hidden;
+  border-right: .03em solid #86B1DE;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .05em;
+  animation:
+    typing 2.5s steps(35,end) 0.75s 1 normal both,
+    animated-cursor 800ms steps(35,end) infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 50% }
+}
+
+/* The typewriter cursor effect */
+@keyframes animated-cursor{
+  from{border-right-color: #86B1DE;}
+  to{border-right-color: transparent;}
+}
+
+#about {
+  font-family: 'Glegoo', sans-serif;
+  color: #3d3d3f;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#about .left {
+  flex: 1;
+  padding: 1rem;
+}
+
+#about .left img {
+  width: 60%;
+  margin-left: 140px;
+}
+
+#about .right {
+  flex: 1;
+  padding: 1rem;
+}
+
+#about .right h2 {
+  font-size: 18px;
+}
+
+#about a {
+  color: #9c9cd1;
+}
+
+#about a:hover {
+  background: transparent;
+  color: #7dce94;
+}
+
+/* EXPERIENCE */
+
+.background {
+  position: relative;
+  width: 100%;
+	height: 100vh;
+}
+
+.triangle-green {
+  width: 0;
+  height: 0;
+	border-top: 550px solid transparent;
+	border-right: 700px solid #bbd9b8;
+  border-bottom: 200px solid transparent;
+  float: right;
+  position: absolute;
+  top: 0px;
+  bottom: -250px;
+  right: 0px;
+  z-index: -50;
+}
+
+.trapezoid-pink {
+  width: 0;
+  height: 0;
+  border-top: 300px solid transparent;
+  border-left: 1200px solid #d4bac8;
+  border-bottom: 150px solid #d4bac8;
+  float: left;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: -100;
+}
+
+.work {
+  padding-top: 150px;
+  width: 100%;
+  z-index: 100;
+}
+
+.work button {
+  background-color: #8dc9c7;
+  color: white;
+  font-size: 18px;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid white;
+  outline: none;
+  width: 20%;
+  display: inline;
+  z-index: 100;
+}
+
+.work button:hover {
+  background-color: #709998;
+  z-index: 100;
+}
+
+.competition {
+  padding-top: 75px;
+  width: 100%;
+  margin-bottom: 50px;
+  z-index: 100;
+}
+
+.competition button {
+  float: right;
+  background-color: #709998;
+  color: white;
+  font-size: 18px;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid white;
+  outline: none;
+  display: inline;
+  width: 20%;
+  margin-left: 2px;
+  margin-right: 2px;
+  z-index: 100;
+}
+
+.competition button:hover {
+  background-color: #8dc9c7;
+  z-index: 100;
+}
+
+/* .volunteer {
+  padding-top: 100px;
+  width: 100%;
+  margin-bottom: 0px;
+}
+
+.volunteer button {
+  background-color: #8dc9c7;
+  color: white;
+  font-size: 18px;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid white;
+  outline: none;
+  width: 20%;
+  display: inline;
+  z-index: 75;
+}
+
+.volunteer button:hover {
+  background-color: #709998;
+} */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.modal-content img {
+  height: auto;
+  width: 25%;
+}
+
+.modal-close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* END EXPERIENCE */
+
+* {
+  box-sizing: border-box;
+}
+
+.col {
+  padding: 20px;
+}
+
+@media (max-width: 400px) {
+  .flex-grid,
+  .flex-grid-thirds {
+    display: block;
+    .col {
+      width: 100%;
+      margin: 0 0 10px 0;
+    }
+  }
+}
+
+h2 {
+  font-size: 14px;
+}
+
+/* End Pages */
+
+body {
+	background-color: #f6f5f3;
+	font-family: 'Glegoo', 'Ubuntu', sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.section {
+    /* the important one*/
+    background-attachment: fixed;
+
+    background-size: auto 80%;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+}
+
+p {
+    font-family: 'Glegoo', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn { background-color:inherit; }
+
+@keyframes move {
+    from { top: -300px;  }
+    to { top: 0px;}
+}
+
+@keyframes appear {
+    0% { color: #f6f5f3;}
+		25% { color: #f6f5f3;}
+		50% { color: #f6f5f3;}
+		75% { color: #f6f5f3;}
+    100% { color: #3d3d3f;}
+}

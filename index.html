@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	  <meta name="author" content="Rachel Ye" />
+    <title>Home</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/sidebar.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+  </head>
+
+  <!-- Header -->
+  <header>
+    <nav>
+        <div class="navbar-logo-left">
+          <a href="#home">R.YE</a>
+        </div>
+
+        <div class="navbar-right">
+          <a href="#experience">Experience</a>
+          <a href="#about">About</a>
+        </div>
+    </nav>
+  </header>
+  <!-- End Header -->
+
+  <body>
+    <div class="wrapper">
+
+      <!-- Page Content -->
+
+      <div id="home" class="page">
+        <div class ="typewriter">
+          <h1> hello. </h1>
+        </div>
+      </div>
+
+      <div id="about" class="page">
+        <div class="left">
+          <img src=img/headshot.png>
+        </div>
+        <div class="right">
+          <h1> Hi! My name is Rachel Ye. </h1> <br>
+          <h2> I am a student at UC Berkeley studying Computer Science and Economics. </h2> <br>
+          <h2> I'm also a </h2>
+          <ul>
+            <li> retired synchronized swimmer </li>
+            <li> fan of Arrested Development, The Office, Rick and Morty, Suits,
+              and The Great British Bake Off </li>
+            <li> an amateur baker</li>
+            <li> an even worse poker player </li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="experience" class="page">
+
+        <div class="work">
+
+          <button id="cmg" class="click-to-open">CMG</button>
+
+          <div id="cmg-modal" class="modal">
+            <div class="modal-content">
+              <span id="cmg" class="modal-close">&times;</span>
+              <p>
+                <h4> CMG Strategy Consulting </h4><br>
+                Contract Business Analyst / 2017 - 2018 <br>
+                Project Manager / 2018<br>
+                External Vice President / 2019<br>
+              </p>
+            </div>
+          </div>
+
+          <button id="nepfin" class="click-to-open">NepFin</button>
+
+          <div id="nepfin-modal" class="modal">
+            <div class="modal-content">
+              <span id="nepfin"class="modal-close">&times;</span>
+              <p>
+                <h4> Neptune Financial </h4><br>
+                Business Development Analyst / 2018
+              </p>
+            </div>
+
+          </div>
+
+          <button id="juni" class="click-to-open">Juni Learning</button>
+
+          <div id="juni-modal" class="modal">
+            <div class="modal-content">
+              <span id="juni" class="modal-close">&times;</span>
+              <p>
+                <h4> Juni Learning </h4> <br>
+                Computer Science Instructor / 2019 - Present
+              </p>
+            </div>
+
+          </div>
+
+          <button id="paypal" class="click-to-open">PayPal</button>
+
+          <div id="paypal-modal" class="modal">
+            <div class="modal-content">
+              <span id="paypal" class="modal-close">&times;</span>
+              <p>
+                <h4> PayPal </h4><br>
+                Product Management Intern / 2019
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="competition">
+
+          <button id="vcic" class="click-to-open">VCIC</button>
+
+          <div id="vcic-modal" class="modal">
+            <div class="modal-content">
+              <span id="vcic" class="modal-close">&times;</span>
+              <p>
+                <h4> Venture Capital Investment Competition </h4><br>
+                Berkeley Regional representative / 2019
+              </p>
+            </div>
+          </div>
+
+          <button id="deloitte" class="click-to-open">Deloitte</button>
+
+          <div id="deloitte-modal" class="modal">
+            <div class="modal-content">
+              <span id="deloitte" class="modal-close">&times;</span>
+              <p>
+                <h4> Deloitte </h4><br>
+                Deloitte Case Competition / Finalist <br>
+                Deloitte StartUp Competition / 1st place
+              </p>
+            </div>
+          </div>
+
+          <button id="kabam" class="click-to-open">Kabam</button>
+
+          <div id="kabam-modal" class="modal">
+            <div class="modal-content">
+              <span id="kabam" class="modal-close">&times;</span>
+              <p>
+                <h4> Kabam Growth Challenge </h4><br>
+                $15K Winning Team / 2017
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- <div class="volunteer">
+
+          <button id="stiles" class="click-to-open">Stiles</button>
+
+          <div id="stiles-modal" class="modal">
+            <div class="modal-content">
+              <span id="stiles" class="modal-close">&times;</span>
+              <p>
+                <h4> Stiles Hall </h4><br>
+                Volunteer / 2018 - Present
+              </p>
+            </div>
+          </div>
+
+        </div> -->
+
+        <script>
+          var buttons = document.getElementsByClassName("click-to-open");
+          var spans = document.getElementsByClassName("modal-close");
+
+          for (var i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener("click",
+              function() {
+                var modal = document.getElementById(this.id + "-modal");
+                modal.style.display = "block";
+              });
+            spans[i].addEventListener("click",
+              function() {
+                var modal = document.getElementById(this.id + "-modal");
+                modal.style.display = "none";
+              });
+          }
+        </script>
+
+        <div class="background">
+          <div class="triangle-green"></div>
+          <div class="trapezoid-pink"></div>
+        </div>
+      </div>
+
+      <!-- Dark Overlay element -->
+      <div class="overlay"></div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
+    <!-- Custom JavaScript -->
+    <script type="text/javascript" src="js/scroll.js"></script>
+
+  </body>
+</html>
